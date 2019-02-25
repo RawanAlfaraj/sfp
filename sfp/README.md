@@ -7,6 +7,7 @@ TO RUN THE CODE:
 - To compile the sass code into CSS run: "npm run compile:sass"
 
 SCREEN SHOTS OF THE CODE:
-
+DESKTOP:
 ![alt text](https://github.com/RawanAlfaraj/sfp/blob/master/sfp/screencapture.png)
+MOBILE:
 ![alt text](https://github.com/RawanAlfaraj/sfp/blob/master/sfp/screencapture--mobile.png)
