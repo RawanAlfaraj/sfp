@@ -9,4 +9,4 @@ TO RUN THE CODE:
 SCREEN SHOTS OF THE CODE:
 
 ![alt text](https://github.com/RawanAlfaraj/sfp/blob/master/sfp/screencapture.png)
-![alt text](https://github.com/RawanAlfaraj/sfp/blob/master/sfp/screencapture-mobile.png)
+![alt text](https://github.com/RawanAlfaraj/sfp/blob/master/sfp/screencapture--mobile.png)
