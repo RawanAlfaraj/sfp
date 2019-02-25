@@ -1,3 +1,4 @@
+SFP ASSESSMENT TEST
 
 TO RUN THE CODE:
 - make sure nodejs is installed on your computer
@@ -5,4 +6,6 @@ TO RUN THE CODE:
 - Re-install the needed packages by running "npm install"
 - To compile the sass code into CSS run: "npm run compile:sass"
 
+SCREEN SHOTS OF THE CODE:
 
+![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
