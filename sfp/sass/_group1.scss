@@ -1,0 +1,73 @@
+.group-1 {
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-row-gap: 4rem;
+  grid-column-gap: 2rem;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+  text-align: center;
+  font-size: 1.4rem;
+  @include responsive(phone) {
+    display: block;
+    font-size: 3rem;
+  }
+
+  &__head {
+    grid-column: 2 / -2;
+  }
+
+  &__section-1 {
+    grid-column: 2 / 3;
+  }
+
+  &__text-h1 {
+    color: $color-black;
+    font-size: 5rem;
+    font-weight: 200;
+    @include responsive(phone) {
+      font-size: 6rem;
+    }
+    &__bold {
+      font-weight: 300;
+    }
+  }
+
+  .icon {
+    background-color: $color-light-blue;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto;
+    @include responsive(phone) {
+    margin-top: 3rem;
+    }
+  }
+
+  .svg-icon {
+    width: 40px; 
+    height:60px; 
+  }
+
+  .use-icon {
+    stroke: none;     
+    fill: white;
+  }
+
+  .p_bold {
+    color: $color-black;
+    font-weight: 400;
+    margin-top: 2rem;
+  }
+
+  &__feature-1 {
+
+  }
+
+  &__feature-2 {
+  
+  }
+
+  &__feature-3 {
+  
+  }
+}

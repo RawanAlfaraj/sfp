@@ -1,0 +1,14 @@
+{
+  "name": "sfp",
+  "version": "1.0.0",
+  "description": "Landing page for Free Spirit",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Rawan Alfaraj",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

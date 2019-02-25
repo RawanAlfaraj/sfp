@@ -1,0 +1,51 @@
+@import "mixins";
+
+/*
+COLORS:
+
+Black : #222222
+Dark-gray : #3f3f3f
+Light-gray: #898989
+Dark-blue : #002d3b
+Light-blue : #4ebef2
+White: #fff
+
+*/
+
+// COLOR VARIABLES
+$color-black : #222222;
+$color-dark-gray : #3f3f3f;
+$color-light-gray: #898989;
+$color-dark-blue : #002d3b;
+$color-light-blue : #4ebef2;
+$color-white: #fff;
+
+// FONT VARIABLES
+$font-primary: "Lato";
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px, 10px/16px(browser default)= 62.5%
+
+  @include responsive(phone) {
+    font-size: 30%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 300;
+  line-height: 1.6;
+  color: $color-light-gray;
+}
+
+

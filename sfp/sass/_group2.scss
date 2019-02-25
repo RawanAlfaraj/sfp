@@ -1,0 +1,109 @@
+@import "mixins";
+
+.group-2{
+  grid-column: full-start / full-end;
+  width: 100%;
+  z-index: 99;
+
+  &__photos-container {
+    display: grid;
+    grid-template-columns: 0.8fr repeat(3, minmax(18rem,1fr)) 0.8fr;
+    grid-gap: 2.5rem;
+
+    @include responsive(phone) {
+      display: block;
+    }
+
+
+
+    &__photo {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      height:30rem;
+      @include responsive(phone) {
+        margin: 2rem;
+      }
+    }
+
+      &__photo::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0;
+        width: 100%;
+        background-image: linear-gradient(to bottom, transparent ,#000 );
+        transition:  1s;
+    }
+
+    &__photo:hover::before{
+        content: "Lorem Ipsum - Needs Jquery to stlye this text in hover";
+        height: 70px;
+        width: 100%;
+        background-image: linear-gradient(to bottom, transparent ,#000 );
+        color: white;
+        font-size: 1.7rem;
+        font-weight: 400;
+    }
+
+    &__column1 {
+      grid-column: 2/3;
+    }
+
+    &__column2 {
+      grid-column: 3/4;
+    }
+
+    &__column3 {
+      grid-column: 4/5;
+    }
+
+    &__photo1 {
+      margin-top: 5rem;
+      background-image: url(/img/travel.jpg);
+      @include responsive(phone) {
+        margin-top: 0;
+      }
+    }
+
+    &__photo2 {
+      margin-top: 2.5rem;
+      background-image: url(/img/travel.jpg);
+      @include responsive(phone) {
+        margin-top: 0;
+      }
+    }
+
+    &__photo3 {
+      background-image: url(/img/swim.jpg);
+    }
+
+    &__photo4 {
+      margin-top: 2.5rem;
+      background-image: url(/img/swim.jpg);
+      @include responsive(phone) {
+        margin-top: 0;
+      }
+    }
+
+    &__photo5 {
+      margin-top: 5rem;
+      background-image: url(/img/surf.jpg);
+      @include responsive(phone) {
+        margin-top: 0;
+      }
+    }
+
+    &__photo6 {
+      margin-top: 2.5rem;
+      background-image: url(/img/surf.jpg);
+      @include responsive(phone) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+
+

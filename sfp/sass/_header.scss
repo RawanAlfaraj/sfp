@@ -1,0 +1,212 @@
+@import "mixins";
+
+.header{
+    height: 98vh;
+    background-image: url("/img/header.jpg");
+    background-size: cover;
+    background-position-y: -10rem; 
+    background-position-x: center;
+    background-repeat: no-repeat;
+    grid-column: full-start / full-end;
+    position: relative;
+
+    &__text {
+    position: absolute;
+    font-weight: 300;
+    top: 35%;
+    right: 15%;
+    font-size: 4rem;
+    color: #fff;
+    width: 39rem;
+    text-transform: uppercase;
+
+    @include responsive(phone) {
+    position: initial;
+    width: auto;
+    text-align: center;
+    margin-top: 20%;
+    font-size: 5rem;
+    }
+
+    @include responsive(tablet) {
+    position: initial;
+    width: auto;
+    text-align: center;
+    margin-top: 20%;
+    }
+
+
+  }
+}
+
+
+nav {
+  height: 8rem;
+  background-color: rgba($color-dark-blue, 0.5);
+ //grid-column: center-start / center-end;
+}
+
+.navigation {
+  grid-column: center-start / center-end;
+  display: flex;
+  align-content: space-between;
+  align-items: center;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(5, minmax( max-content ,1fr) );
+  width: 50%;
+  float: right;
+  margin-right: 16rem;
+  margin-top: 3rem;
+  @include responsive(phone) {
+    display: none;
+    text-align: center;
+    margin: 0rem auto;
+    padding: 2rem;
+    width: 100%;
+    background-color: #fff;
+
+  }
+
+  @include responsive(tablet) {
+    display: none;
+    text-align: center;
+    margin: 0rem auto;
+    padding: 2rem;
+    width: 100%;
+    background-color: #fff;
+
+  }
+
+  li {
+    list-style: none;
+    @include responsive(phone) {
+        padding: 1rem;
+        border-bottom: 0.1rem solid $color-light-gray;
+    }
+    a{
+      text-decoration: none;
+      font-size: 1.6rem;
+      color: $color-white;
+
+      @include responsive(phone) {
+        font-size: 4rem;
+        color: $color-dark-gray;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &__bold {
+      font-weight: 600;
+    }
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 0.4rem;
+    background-color: $color-dark-blue;
+    z-index: 400;
+    opacity: .5;
+    transform: scaleX(0);
+    transition: 0.5s;
+  }
+
+  &__item:hover::before {
+    transform: scaleX(1);
+  }
+
+  &__logo{
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-left:  16rem;
+
+      @include responsive(phone) {
+            margin: 0 3rem;
+        text-align: center; 
+      }
+
+      @include responsive(tablet) {
+            margin: 0 3rem;
+        text-align: center; 
+      }
+
+
+    &__svg {
+      width:70px; 
+      height:25px;
+      transform:scale(5);
+
+    }
+
+    &__logo-image {
+  }
+}
+  
+  
+}
+
+// mobile menu
+
+label {
+  font-size: 8rem;
+  float: right;
+  margin-right: 4rem;
+  margin-top: 0.5rem;
+  color: #fff;
+  display: none;
+
+
+    @include responsive(tablet) {
+    display: block;
+    cursor: pointer;
+    font-size: 4.5rem;
+  }
+
+  @include responsive(phone) {
+    font-size: 8rem;
+    display: block;
+    cursor: pointer;
+  }
+
+}
+
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked {
+  //+ .navigation{
+  //display: block;
+//}
+}
+
+
+
+
+.phone {
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  width: 35rem;
+  height: 70rem;
+
+  @include responsive(phone) {
+    display: none;
+  }
+
+  @include responsive(tablet) {
+    display: none;
+  }
+
+}
+
+
+

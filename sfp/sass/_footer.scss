@@ -1,0 +1,84 @@
+.footer {
+  grid-column: full-start / full-end;
+  position: relative;
+  font-weight: 300;
+  &__bg {
+  margin-top: -15rem;
+  background-image: url(/img/footer.jpg);
+  background-size: cover;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  width: 100%;
+  height: 100vh;
+  @include responsive(phone) {
+    background-position-x: 65%;
+  }
+  }
+  &__bg::before{
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to bottom, transparent ,#000 );
+  bottom:0;
+  left: 0;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  z-index: 99;
+  }
+  &__text {
+    position: absolute;
+    top: 55%;
+    right: 20%;
+    font-size: 5rem;
+    color: #fff;
+    @include responsive(phone) {
+      top: 75%;
+      right: 10%;
+    }
+
+    &__bold {
+      font-weight: 400;
+    }
+
+    &__big {
+      position: absolute;
+      top: 60%;
+      right: 20%;
+      font-size: 8rem;
+      color: #fff;
+      @include responsive(phone) {
+        top: 80%;
+        right: 10%;
+      }
+    }
+}
+  
+    &__btn {
+    position: absolute;
+    top: 80%;
+    right: 20%;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: 1px solid #fff;
+    outline-style: none;
+    cursor: pointer;
+
+    @include responsive(phone) {
+        top: 95%;
+        right: 10%;
+    }
+
+  }
+
+
+  &__btn:hover {
+    position: absolute;
+    background-color: $color-dark-blue;
+
+
+  }
+
+
+}
